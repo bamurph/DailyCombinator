@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B52AC3261DA57C80005ED981 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52AC3251DA57C80005ED981 /* Firebase.framework */; };
+		B52AC3271DA57CC1005ED981 /* Firebase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B52AC3251DA57C80005ED981 /* Firebase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B52AC3291DA57D07005ED981 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52AC3281DA57D07005ED981 /* Security.framework */; };
+		B52AC32A1DA57D16005ED981 /* Security.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B52AC3281DA57D07005ED981 /* Security.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B52AC32C1DA57D27005ED981 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52AC32B1DA57D27005ED981 /* CFNetwork.framework */; };
+		B52AC32E1DA57D32005ED981 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52AC32D1DA57D32005ED981 /* SystemConfiguration.framework */; };
+		B52AC3301DA57DAD005ED981 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B52AC32F1DA57DAD005ED981 /* libicucore.tbd */; };
+		B52AC3321DA57DB3005ED981 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B52AC3311DA57DB3005ED981 /* libc++.tbd */; };
 		B5A586EA1DA56DA600028F5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A586E91DA56DA600028F5C /* AppDelegate.swift */; };
 		B5A586EC1DA56DA600028F5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A586EB1DA56DA600028F5C /* ViewController.swift */; };
 		B5A586EF1DA56DA600028F5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5A586ED1DA56DA600028F5C /* Main.storyboard */; };
@@ -24,6 +32,62 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		B52AC3131DA57C24005ED981 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5A590F51DA5728700028F5C /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D45480571A9572F5009D7229;
+			remoteInfo = "Result-Mac";
+		};
+		B52AC3151DA57C24005ED981 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5A590F51DA5728700028F5C /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D45480671A9572F5009D7229;
+			remoteInfo = "Result-MacTests";
+		};
+		B52AC3171DA57C24005ED981 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5A590F51DA5728700028F5C /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D454807D1A957361009D7229;
+			remoteInfo = "Result-iOS";
+		};
+		B52AC3191DA57C24005ED981 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5A590F51DA5728700028F5C /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D45480871A957362009D7229;
+			remoteInfo = "Result-iOSTests";
+		};
+		B52AC31B1DA57C24005ED981 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5A590F51DA5728700028F5C /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 57FCDE471BA280DC00130C48;
+			remoteInfo = "Result-tvOS";
+		};
+		B52AC31D1DA57C24005ED981 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5A590F51DA5728700028F5C /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 57FCDE541BA280E000130C48;
+			remoteInfo = "Result-tvOSTests";
+		};
+		B52AC31F1DA57C24005ED981 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5A590F51DA5728700028F5C /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D03579A31B2B788F005D26AE;
+			remoteInfo = "Result-watchOS";
+		};
+		B52AC3211DA57C24005ED981 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5A590F51DA5728700028F5C /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D03579B01B2B78A1005D26AE;
+			remoteInfo = "Result-watchOSTests";
+		};
 		B5A586FE1DA56DA600028F5C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B5A586DE1DA56DA600028F5C /* Project object */;
@@ -145,6 +209,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B52AC32A1DA57D16005ED981 /* Security.framework in Embed Frameworks */,
+				B52AC3271DA57CC1005ED981 /* Firebase.framework in Embed Frameworks */,
 				B5A5914B1DA5737000028F5C /* Result.framework in Embed Frameworks */,
 				B5A591511DA5737000028F5C /* ReactiveCocoa.framework in Embed Frameworks */,
 				B5A5914E1DA5737000028F5C /* ReactiveSwift.framework in Embed Frameworks */,
@@ -155,6 +221,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B52AC3251DA57C80005ED981 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = External/Firebase.framework; sourceTree = "<group>"; };
+		B52AC3281DA57D07005ED981 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B52AC32B1DA57D27005ED981 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B52AC32D1DA57D32005ED981 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B52AC32F1DA57DAD005ED981 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		B52AC3311DA57DB3005ED981 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		B5A586E61DA56DA600028F5C /* DailyCombinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyCombinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5A586E91DA56DA600028F5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5A586EB1DA56DA600028F5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +254,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B52AC3321DA57DB3005ED981 /* libc++.tbd in Frameworks */,
+				B52AC3301DA57DAD005ED981 /* libicucore.tbd in Frameworks */,
+				B52AC32E1DA57D32005ED981 /* SystemConfiguration.framework in Frameworks */,
+				B52AC32C1DA57D27005ED981 /* CFNetwork.framework in Frameworks */,
+				B52AC3291DA57D07005ED981 /* Security.framework in Frameworks */,
+				B52AC3261DA57C80005ED981 /* Firebase.framework in Frameworks */,
 				B5A5914A1DA5737000028F5C /* Result.framework in Frameworks */,
 				B5A591501DA5737000028F5C /* ReactiveCocoa.framework in Frameworks */,
 				B5A5914D1DA5737000028F5C /* ReactiveSwift.framework in Frameworks */,
@@ -205,6 +283,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B52AC2FB1DA57C23005ED981 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B52AC3141DA57C24005ED981 /* Result.framework */,
+				B52AC3161DA57C24005ED981 /* Result-MacTests.xctest */,
+				B52AC3181DA57C24005ED981 /* Result.framework */,
+				B52AC31A1DA57C24005ED981 /* Result-iOSTests.xctest */,
+				B52AC31C1DA57C24005ED981 /* Result.framework */,
+				B52AC31E1DA57C24005ED981 /* Result-tvOSTests.xctest */,
+				B52AC3201DA57C24005ED981 /* Result.framework */,
+				B52AC3221DA57C24005ED981 /* Result-watchOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		B5A586DD1DA56DA600028F5C = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +374,12 @@
 		B5A591521DA573FF00028F5C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B52AC3311DA57DB3005ED981 /* libc++.tbd */,
+				B52AC32F1DA57DAD005ED981 /* libicucore.tbd */,
+				B52AC32D1DA57D32005ED981 /* SystemConfiguration.framework */,
+				B52AC32B1DA57D27005ED981 /* CFNetwork.framework */,
+				B52AC3281DA57D07005ED981 /* Security.framework */,
+				B52AC3251DA57C80005ED981 /* Firebase.framework */,
 				B5A5914F1DA5737000028F5C /* ReactiveCocoa.framework */,
 				B5A5914C1DA5737000028F5C /* ReactiveSwift.framework */,
 				B5A591491DA5737000028F5C /* Result.framework */,
@@ -422,6 +521,10 @@
 					ProductGroup = B5A591531DA5749900028F5C /* Products */;
 					ProjectRef = B5A591411DA572A200028F5C /* ReactiveSwift.xcodeproj */;
 				},
+				{
+					ProductGroup = B52AC2FB1DA57C23005ED981 /* Products */;
+					ProjectRef = B5A590F51DA5728700028F5C /* Result.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -433,6 +536,62 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		B52AC3141DA57C24005ED981 /* Result.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Result.framework;
+			remoteRef = B52AC3131DA57C24005ED981 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B52AC3161DA57C24005ED981 /* Result-MacTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Result-MacTests.xctest";
+			remoteRef = B52AC3151DA57C24005ED981 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B52AC3181DA57C24005ED981 /* Result.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Result.framework;
+			remoteRef = B52AC3171DA57C24005ED981 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B52AC31A1DA57C24005ED981 /* Result-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Result-iOSTests.xctest";
+			remoteRef = B52AC3191DA57C24005ED981 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B52AC31C1DA57C24005ED981 /* Result.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Result.framework;
+			remoteRef = B52AC31B1DA57C24005ED981 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B52AC31E1DA57C24005ED981 /* Result-tvOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Result-tvOSTests.xctest";
+			remoteRef = B52AC31D1DA57C24005ED981 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B52AC3201DA57C24005ED981 /* Result.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Result.framework;
+			remoteRef = B52AC31F1DA57C24005ED981 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B52AC3221DA57C24005ED981 /* Result-watchOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Result-watchOSTests.xctest";
+			remoteRef = B52AC3211DA57C24005ED981 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		B5A5915F1DA5749900028F5C /* ReactiveCocoa.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -720,6 +879,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 97JRRX372K;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/External/ReactiveCocoa/Carthage/Checkouts/Result",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/External",
+				);
 				INFOPLIST_FILE = DailyCombinator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = constellation.DailyCombinator;
@@ -733,6 +898,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 97JRRX372K;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/External/ReactiveCocoa/Carthage/Checkouts/Result",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/External",
+				);
 				INFOPLIST_FILE = DailyCombinator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = constellation.DailyCombinator;
