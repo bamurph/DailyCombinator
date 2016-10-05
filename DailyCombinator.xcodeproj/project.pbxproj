@@ -10,7 +10,6 @@
 		B52AC3261DA57C80005ED981 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52AC3251DA57C80005ED981 /* Firebase.framework */; };
 		B52AC3271DA57CC1005ED981 /* Firebase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B52AC3251DA57C80005ED981 /* Firebase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B52AC3291DA57D07005ED981 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52AC3281DA57D07005ED981 /* Security.framework */; };
-		B52AC32A1DA57D16005ED981 /* Security.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B52AC3281DA57D07005ED981 /* Security.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B52AC32C1DA57D27005ED981 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52AC32B1DA57D27005ED981 /* CFNetwork.framework */; };
 		B52AC32E1DA57D32005ED981 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52AC32D1DA57D32005ED981 /* SystemConfiguration.framework */; };
 		B52AC3301DA57DAD005ED981 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B52AC32F1DA57DAD005ED981 /* libicucore.tbd */; };
@@ -209,7 +208,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B52AC32A1DA57D16005ED981 /* Security.framework in Embed Frameworks */,
 				B52AC3271DA57CC1005ED981 /* Firebase.framework in Embed Frameworks */,
 				B5A5914B1DA5737000028F5C /* Result.framework in Embed Frameworks */,
 				B5A591511DA5737000028F5C /* ReactiveCocoa.framework in Embed Frameworks */,
