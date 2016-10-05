@@ -15,6 +15,12 @@
 		B5A586F71DA56DA600028F5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5A586F51DA56DA600028F5C /* LaunchScreen.storyboard */; };
 		B5A587021DA56DA600028F5C /* DailyCombinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A587011DA56DA600028F5C /* DailyCombinatorTests.swift */; };
 		B5A5870D1DA56DA600028F5C /* DailyCombinatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A5870C1DA56DA600028F5C /* DailyCombinatorUITests.swift */; };
+		B5A5914A1DA5737000028F5C /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A591491DA5737000028F5C /* Result.framework */; };
+		B5A5914B1DA5737000028F5C /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5A591491DA5737000028F5C /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B5A5914D1DA5737000028F5C /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A5914C1DA5737000028F5C /* ReactiveSwift.framework */; };
+		B5A5914E1DA5737000028F5C /* ReactiveSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5A5914C1DA5737000028F5C /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B5A591501DA5737000028F5C /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A5914F1DA5737000028F5C /* ReactiveCocoa.framework */; };
+		B5A591511DA5737000028F5C /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5A5914F1DA5737000028F5C /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B5A591481DA5733F00028F5C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B5A5914B1DA5737000028F5C /* Result.framework in Embed Frameworks */,
+				B5A591511DA5737000028F5C /* ReactiveCocoa.framework in Embed Frameworks */,
+				B5A5914E1DA5737000028F5C /* ReactiveSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		B5A586E61DA56DA600028F5C /* DailyCombinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyCombinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5A586E91DA56DA600028F5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +71,12 @@
 		B5A587081DA56DA600028F5C /* DailyCombinatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyCombinatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5A5870C1DA56DA600028F5C /* DailyCombinatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCombinatorUITests.swift; sourceTree = "<group>"; };
 		B5A5870E1DA56DA600028F5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5A590F51DA5728700028F5C /* Result.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Result.xcodeproj; sourceTree = "<group>"; };
+		B5A591411DA572A200028F5C /* ReactiveSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveSwift.xcodeproj; path = ../ReactiveSwift/ReactiveSwift.xcodeproj; sourceTree = "<group>"; };
+		B5A591421DA572A200028F5C /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = ../../../ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
+		B5A591491DA5737000028F5C /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5A5914C1DA5737000028F5C /* ReactiveSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReactiveSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5A5914F1DA5737000028F5C /* ReactiveCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReactiveCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +84,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5A5914A1DA5737000028F5C /* Result.framework in Frameworks */,
+				B5A591501DA5737000028F5C /* ReactiveCocoa.framework in Frameworks */,
+				B5A5914D1DA5737000028F5C /* ReactiveSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				B5A586E81DA56DA600028F5C /* DailyCombinator */,
+				B5A591521DA573FF00028F5C /* Frameworks */,
+				B5A591431DA572A200028F5C /* External */,
 				B5A587001DA56DA600028F5C /* DailyCombinatorTests */,
 				B5A5870B1DA56DA600028F5C /* DailyCombinatorUITests */,
 				B5A586E71DA56DA600028F5C /* Products */,
@@ -128,6 +161,35 @@
 			path = DailyCombinatorUITests;
 			sourceTree = "<group>";
 		};
+		B5A591431DA572A200028F5C /* External */ = {
+			isa = PBXGroup;
+			children = (
+				B5A591441DA572C600028F5C /* ReactiveCocoa */,
+			);
+			name = External;
+			path = External/ReactiveCocoa/Carthage/Checkouts/Result;
+			sourceTree = "<group>";
+		};
+		B5A591441DA572C600028F5C /* ReactiveCocoa */ = {
+			isa = PBXGroup;
+			children = (
+				B5A590F51DA5728700028F5C /* Result.xcodeproj */,
+				B5A591411DA572A200028F5C /* ReactiveSwift.xcodeproj */,
+				B5A591421DA572A200028F5C /* ReactiveCocoa.xcodeproj */,
+			);
+			name = ReactiveCocoa;
+			sourceTree = "<group>";
+		};
+		B5A591521DA573FF00028F5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5A5914F1DA5737000028F5C /* ReactiveCocoa.framework */,
+				B5A5914C1DA5737000028F5C /* ReactiveSwift.framework */,
+				B5A591491DA5737000028F5C /* Result.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +200,7 @@
 				B5A586E21DA56DA600028F5C /* Sources */,
 				B5A586E31DA56DA600028F5C /* Frameworks */,
 				B5A586E41DA56DA600028F5C /* Resources */,
+				B5A591481DA5733F00028F5C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -518,6 +581,7 @@
 				B5A587131DA56DA600028F5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B5A587141DA56DA600028F5C /* Build configuration list for PBXNativeTarget "DailyCombinatorTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +590,7 @@
 				B5A587161DA56DA600028F5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B5A587171DA56DA600028F5C /* Build configuration list for PBXNativeTarget "DailyCombinatorUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +599,7 @@
 				B5A587191DA56DA600028F5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
