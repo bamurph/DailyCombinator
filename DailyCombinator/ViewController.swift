@@ -7,12 +7,21 @@
 //
 
 import UIKit
+import ReactiveCocoa
+import ReactiveSwift
+import Firebase
 
 class ViewController: UIViewController {
 
+    let newsService = HNService()
+    let subscriber = Observer<FDataSnapshot, NSError>(value: { print("\($0)") })
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        newsService.requestAccessToItem(8000)
+            .start(subscriber)
+
     }
 
     override func didReceiveMemoryWarning() {
