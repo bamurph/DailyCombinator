@@ -13,7 +13,7 @@ import Firebase
 
 class ViewController: UIViewController {
 
-    let newsService = HNService()
+    let viewModel = HNViewModel()
     let subscriber = Observer<FDataSnapshot, NSError>(value: { print("\($0)") })
 
     override func viewDidLoad() {
