@@ -16,6 +16,7 @@
 		B52AC3321DA57DB3005ED981 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B52AC3311DA57DB3005ED981 /* libc++.tbd */; };
 		B52AC3361DA58275005ED981 /* HNService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52AC3351DA58275005ED981 /* HNService.swift */; };
 		B52AC3381DA588D0005ED981 /* HNError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52AC3371DA588D0005ED981 /* HNError.swift */; };
+		B52AC33D1DA5A389005ED981 /* HNViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52AC33C1DA5A389005ED981 /* HNViewModel.swift */; };
 		B5A586EA1DA56DA600028F5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A586E91DA56DA600028F5C /* AppDelegate.swift */; };
 		B5A586EC1DA56DA600028F5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A586EB1DA56DA600028F5C /* ViewController.swift */; };
 		B5A586EF1DA56DA600028F5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5A586ED1DA56DA600028F5C /* Main.storyboard */; };
@@ -229,6 +230,7 @@
 		B52AC3311DA57DB3005ED981 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		B52AC3351DA58275005ED981 /* HNService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HNService.swift; sourceTree = "<group>"; };
 		B52AC3371DA588D0005ED981 /* HNError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HNError.swift; sourceTree = "<group>"; };
+		B52AC33C1DA5A389005ED981 /* HNViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HNViewModel.swift; sourceTree = "<group>"; };
 		B5A586E61DA56DA600028F5C /* DailyCombinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyCombinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5A586E91DA56DA600028F5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5A586EB1DA56DA600028F5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 		B52AC3331DA58253005ED981 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B52AC33C1DA5A389005ED981 /* HNViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -746,6 +749,7 @@
 			files = (
 				B5A586EC1DA56DA600028F5C /* ViewController.swift in Sources */,
 				B52AC3361DA58275005ED981 /* HNService.swift in Sources */,
+				B52AC33D1DA5A389005ED981 /* HNViewModel.swift in Sources */,
 				B5A586F21DA56DA600028F5C /* DailyCombinator.xcdatamodeld in Sources */,
 				B5A586EA1DA56DA600028F5C /* AppDelegate.swift in Sources */,
 				B52AC3381DA588D0005ED981 /* HNError.swift in Sources */,
