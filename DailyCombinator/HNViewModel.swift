@@ -10,12 +10,12 @@ import Foundation
 import ReactiveSwift
 import ReactiveCocoa
 import Firebase
+import Result
 
 class HNViewModel {
 
     let newsService = HNService()
     let itemID = MutableProperty<String>("121003")
-
 
     let newsSubscriber = Observer<NSDictionary, NSError>(value: { print("\($0)") })
     let response = MutableProperty<NSDictionary>(NSDictionary())
@@ -26,6 +26,7 @@ class HNViewModel {
     init() {
         itemID.producer
             .filter { $0.characters.count > 0 }
+            .throttle(0.5, on: QueueScheduler.main)
             .observe(on: QueueScheduler.main).start {
                 guard let id = Int($0.value!) else { return }
                 self.newsService.signalForItem(id)
