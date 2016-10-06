@@ -15,10 +15,21 @@ class HNViewModel {
 
     let newsService = HNService()
 
+    let newsSubscriber = Observer<NSDictionary, NSError>(value: { print("\($0)") })
     let response = MutableProperty<NSDictionary>(NSDictionary())
+    let titleText = MutableProperty<String>("")
 
     init() {
-        newsService.requestAccessToItem(8888)
-        .on(value: <#T##((FDataSnapshot) -> Void)?##((FDataSnapshot) -> Void)?##(FDataSnapshot) -> Void#>, failed: <#T##((NSError) -> Void)?##((NSError) -> Void)?##(NSError) -> Void#>, completed: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>, interrupted: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>, terminated: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>, disposed: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
+        
+        newsService.signalForItem(8888)
+            .observe(on: QueueScheduler.main).start { r in
+                guard r.value != nil else { return }
+                self.response.value = r.value!
+                self.titleText.value = r.value!.value(forKey: "title") as! String
+        }
     }
+
+
+
 }
+

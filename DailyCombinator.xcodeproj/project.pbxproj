@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B52343251DA6C36100AD5550 /* FDataSnapshotExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52343241DA6C36100AD5550 /* FDataSnapshotExtensions.swift */; };
+		B523433D1DA6CB3700AD5550 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B523433C1DA6CB3700AD5550 /* UIKitExtensions.swift */; };
+		B52343561DA6D1A200AD5550 /* ReactiveObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B523434D1DA6D18700AD5550 /* ReactiveObjC.framework */; };
+		B52343571DA6D1E900AD5550 /* ReactiveObjC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B523434D1DA6D18700AD5550 /* ReactiveObjC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B52AC3261DA57C80005ED981 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52AC3251DA57C80005ED981 /* Firebase.framework */; };
 		B52AC3271DA57CC1005ED981 /* Firebase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B52AC3251DA57C80005ED981 /* Firebase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B52AC3291DA57D07005ED981 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52AC3281DA57D07005ED981 /* Security.framework */; };
@@ -34,6 +38,62 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		B52343481DA6D18700AD5550 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B523433E1DA6D18700AD5550 /* ReactiveObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D04725EA19E49ED7006002AA;
+			remoteInfo = "ReactiveObjC-macOS";
+		};
+		B523434A1DA6D18700AD5550 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B523433E1DA6D18700AD5550 /* ReactiveObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D04725F519E49ED7006002AA;
+			remoteInfo = "ReactiveObjC-macOSTests";
+		};
+		B523434C1DA6D18700AD5550 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B523433E1DA6D18700AD5550 /* ReactiveObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D047260C19E49F82006002AA;
+			remoteInfo = "ReactiveObjC-iOS";
+		};
+		B523434E1DA6D18700AD5550 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B523433E1DA6D18700AD5550 /* ReactiveObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D047261619E49F82006002AA;
+			remoteInfo = "ReactiveObjC-iOSTests";
+		};
+		B52343501DA6D18700AD5550 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B523433E1DA6D18700AD5550 /* ReactiveObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A9B315541B3940610001CB9C;
+			remoteInfo = "ReactiveObjC-watchOS";
+		};
+		B52343521DA6D18700AD5550 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B523433E1DA6D18700AD5550 /* ReactiveObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 57A4D2411BA13D7A00F7D4B1;
+			remoteInfo = "ReactiveObjC-tvOS";
+		};
+		B52343541DA6D18700AD5550 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B523433E1DA6D18700AD5550 /* ReactiveObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7DFBED031CDB8C9500EE435B;
+			remoteInfo = "ReactiveObjC-tvOSTests";
+		};
+		B523435A1DA6D29100AD5550 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B523433E1DA6D18700AD5550 /* ReactiveObjC.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D047260B19E49F82006002AA;
+			remoteInfo = "ReactiveObjC-iOS";
+		};
 		B52AC3131DA57C24005ED981 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B5A590F51DA5728700028F5C /* Result.xcodeproj */;
@@ -205,6 +265,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		B52343581DA6D21F00AD5550 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B5A591481DA5733F00028F5C /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -215,6 +284,7 @@
 				B5A5914B1DA5737000028F5C /* Result.framework in Embed Frameworks */,
 				B5A591511DA5737000028F5C /* ReactiveCocoa.framework in Embed Frameworks */,
 				B5A5914E1DA5737000028F5C /* ReactiveSwift.framework in Embed Frameworks */,
+				B52343571DA6D1E900AD5550 /* ReactiveObjC.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,6 +292,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B52343241DA6C36100AD5550 /* FDataSnapshotExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDataSnapshotExtensions.swift; sourceTree = "<group>"; };
+		B523433C1DA6CB3700AD5550 /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
+		B523433E1DA6D18700AD5550 /* ReactiveObjC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveObjC.xcodeproj; path = ReactiveObjC/ReactiveObjC.xcodeproj; sourceTree = SOURCE_ROOT; };
 		B52AC3251DA57C80005ED981 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = External/Firebase.framework; sourceTree = "<group>"; };
 		B52AC3281DA57D07005ED981 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B52AC32B1DA57D27005ED981 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -258,6 +331,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B52343561DA6D1A200AD5550 /* ReactiveObjC.framework in Frameworks */,
 				B52AC3321DA57DB3005ED981 /* libc++.tbd in Frameworks */,
 				B52AC3301DA57DAD005ED981 /* libicucore.tbd in Frameworks */,
 				B52AC32E1DA57D32005ED981 /* SystemConfiguration.framework in Frameworks */,
@@ -287,6 +361,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B523433F1DA6D18700AD5550 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B52343491DA6D18700AD5550 /* ReactiveObjC.framework */,
+				B523434B1DA6D18700AD5550 /* ReactiveObjCTests.xctest */,
+				B523434D1DA6D18700AD5550 /* ReactiveObjC.framework */,
+				B523434F1DA6D18700AD5550 /* ReactiveObjCTests.xctest */,
+				B52343511DA6D18700AD5550 /* ReactiveObjC.framework */,
+				B52343531DA6D18700AD5550 /* ReactiveObjC.framework */,
+				B52343551DA6D18700AD5550 /* ReactiveObjCTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		B52AC2FB1DA57C23005ED981 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,6 +432,8 @@
 		B5A586E81DA56DA600028F5C /* DailyCombinator */ = {
 			isa = PBXGroup;
 			children = (
+				B52343241DA6C36100AD5550 /* FDataSnapshotExtensions.swift */,
+				B523433C1DA6CB3700AD5550 /* UIKitExtensions.swift */,
 				B52AC3341DA58258005ED981 /* Service */,
 				B52AC3331DA58253005ED981 /* ViewModel */,
 				B5A586E91DA56DA600028F5C /* AppDelegate.swift */,
@@ -387,6 +477,7 @@
 		B5A591441DA572C600028F5C /* ReactiveCocoa */ = {
 			isa = PBXGroup;
 			children = (
+				B523433E1DA6D18700AD5550 /* ReactiveObjC.xcodeproj */,
 				B5A590F51DA5728700028F5C /* Result.xcodeproj */,
 				B5A591411DA572A200028F5C /* ReactiveSwift.xcodeproj */,
 				B5A591421DA572A200028F5C /* ReactiveCocoa.xcodeproj */,
@@ -449,10 +540,12 @@
 				B5A586E31DA56DA600028F5C /* Frameworks */,
 				B5A586E41DA56DA600028F5C /* Resources */,
 				B5A591481DA5733F00028F5C /* Embed Frameworks */,
+				B52343581DA6D21F00AD5550 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B523435B1DA6D29100AD5550 /* PBXTargetDependency */,
 			);
 			name = DailyCombinator;
 			productName = DailyCombinator;
@@ -541,6 +634,10 @@
 					ProjectRef = B5A591421DA572A200028F5C /* ReactiveCocoa.xcodeproj */;
 				},
 				{
+					ProductGroup = B523433F1DA6D18700AD5550 /* Products */;
+					ProjectRef = B523433E1DA6D18700AD5550 /* ReactiveObjC.xcodeproj */;
+				},
+				{
 					ProductGroup = B5A591531DA5749900028F5C /* Products */;
 					ProjectRef = B5A591411DA572A200028F5C /* ReactiveSwift.xcodeproj */;
 				},
@@ -559,6 +656,55 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		B52343491DA6D18700AD5550 /* ReactiveObjC.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReactiveObjC.framework;
+			remoteRef = B52343481DA6D18700AD5550 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B523434B1DA6D18700AD5550 /* ReactiveObjCTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ReactiveObjCTests.xctest;
+			remoteRef = B523434A1DA6D18700AD5550 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B523434D1DA6D18700AD5550 /* ReactiveObjC.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReactiveObjC.framework;
+			remoteRef = B523434C1DA6D18700AD5550 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B523434F1DA6D18700AD5550 /* ReactiveObjCTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ReactiveObjCTests.xctest;
+			remoteRef = B523434E1DA6D18700AD5550 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B52343511DA6D18700AD5550 /* ReactiveObjC.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReactiveObjC.framework;
+			remoteRef = B52343501DA6D18700AD5550 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B52343531DA6D18700AD5550 /* ReactiveObjC.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReactiveObjC.framework;
+			remoteRef = B52343521DA6D18700AD5550 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B52343551DA6D18700AD5550 /* ReactiveObjCTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ReactiveObjCTests.xctest;
+			remoteRef = B52343541DA6D18700AD5550 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		B52AC3141DA57C24005ED981 /* Result.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -753,6 +899,8 @@
 				B5A586F21DA56DA600028F5C /* DailyCombinator.xcdatamodeld in Sources */,
 				B5A586EA1DA56DA600028F5C /* AppDelegate.swift in Sources */,
 				B52AC3381DA588D0005ED981 /* HNError.swift in Sources */,
+				B523433D1DA6CB3700AD5550 /* UIKitExtensions.swift in Sources */,
+				B52343251DA6C36100AD5550 /* FDataSnapshotExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -775,6 +923,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		B523435B1DA6D29100AD5550 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ReactiveObjC-iOS";
+			targetProxy = B523435A1DA6D29100AD5550 /* PBXContainerItemProxy */;
+		};
 		B5A586FF1DA56DA600028F5C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B5A586E51DA56DA600028F5C /* DailyCombinator */;
@@ -911,8 +1064,13 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/External",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts/include",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = DailyCombinator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = constellation.DailyCombinator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -930,8 +1088,13 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/External",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts/include",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = DailyCombinator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = constellation.DailyCombinator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;

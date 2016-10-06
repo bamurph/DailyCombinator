@@ -9,24 +9,23 @@
 import UIKit
 import ReactiveCocoa
 import ReactiveSwift
+import ReactiveObjC
 import Firebase
 
 class ViewController: UIViewController {
 
     let viewModel = HNViewModel()
-    let subscriber = Observer<FDataSnapshot, NSError>(value: { print("\($0)") })
+
+    @IBOutlet weak var titleLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        newsService.requestAccessToItem(8000)
-            .start(subscriber)
-
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+        viewModel.titleText <~ titleLabel.rac_text
     }
 
 

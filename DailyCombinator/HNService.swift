@@ -18,17 +18,16 @@ class HNService {
         return rootRef?.child(byAppendingPath: "item/\(id)")
     }
 
-    func requestAccessToItem(_ id: Int) -> SignalProducer<FDataSnapshot, NSError> {
+    func signalForItem(_ id: Int) -> SignalProducer<NSDictionary, NSError> {
+        return SignalProducer { sink, disposable in
 
-
-        return SignalProducer {
-            (observer: Observer<FDataSnapshot, NSError>, _) in
             self.itemRef(id)?.observe(.value, with: { snapshot in
-                guard let s = snapshot
-                    else { return observer.send(error: HNError.Canceled.toError()) }
-                observer.send(value: s)
-                observer.sendCompleted()
+                guard let itemDict = snapshot?.value as? NSDictionary
+                    else { return sink.send(error: HNError.Canceled.toError()) }
+                sink.send(value: itemDict)
+                sink.sendCompleted()
             })
         }
     }
+
 }
