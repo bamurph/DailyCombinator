@@ -26,6 +26,7 @@ class HNViewModel {
     init() {
         itemID.producer
             .filter { $0.characters.count > 0 }
+            .throttle(0.5, on: QueueScheduler.main)
             .observe(on: QueueScheduler.main).start {
                 guard let id = Int($0.value!) else { return }
                 self.newsService.signalForItem(id)
