@@ -55,6 +55,12 @@ extension UILabel {
     }
 }
 
+extension UITextView {
+    public var rac_text: MutableProperty<String> {
+        return lazyMutableProperty(host: self, key: &AssociationKey.text, setter: { self.text = $0 }, getter: { self.text ?? "" })
+    }
+}
+
 extension UITextField {
     public var rac_text: MutableProperty<String> {
         return lazyAssociatedProperty(host: self, key: &AssociationKey.text) {

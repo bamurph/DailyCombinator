@@ -17,15 +17,21 @@ class ViewController: UIViewController {
     let viewModel = HNViewModel()
 
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var commentView: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        titleLabel.rac_text <~ viewModel.titleText.signal
+        textView.rac_text
+
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 
-        viewModel.titleText <~ titleLabel.rac_text
     }
 
 

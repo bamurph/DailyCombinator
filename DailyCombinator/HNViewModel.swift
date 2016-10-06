@@ -18,6 +18,8 @@ class HNViewModel {
     let newsSubscriber = Observer<NSDictionary, NSError>(value: { print("\($0)") })
     let response = MutableProperty<NSDictionary>(NSDictionary())
     let titleText = MutableProperty<String>("")
+    let commentText = MutableProperty<String>("")
+    let itemText = MutableProperty<String>("")
 
     init() {
         
@@ -25,7 +27,9 @@ class HNViewModel {
             .observe(on: QueueScheduler.main).start { r in
                 guard r.value != nil else { return }
                 self.response.value = r.value!
-                self.titleText.value = r.value!.value(forKey: "title") as! String
+                self.commentText.value = r.value?.value(forKey: "comment") as? String ?? ""
+                self.titleText.value = r.value?.value(forKey: "title") as? String ?? ""
+                self.itemText.value = r.value?.value(forKey: "text") as? String ?? ""
         }
     }
 

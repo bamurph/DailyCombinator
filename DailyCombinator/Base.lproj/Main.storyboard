@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,22 +19,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCJ-t1-t04">
-                                <frame key="frameInset" minX="166" minY="71" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCJ-t1-t04">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="o8F-KU-jCs">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BPe-mA-WpW">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="o8F-KU-jCs" firstAttribute="leading" secondItem="HCJ-t1-t04" secondAttribute="leading" id="8cI-Ve-Ikj"/>
+                            <constraint firstItem="BPe-mA-WpW" firstAttribute="top" secondItem="o8F-KU-jCs" secondAttribute="bottom" constant="1" id="9QT-h0-RQ6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="o8F-KU-jCs" secondAttribute="bottom" constant="475" id="B8h-Sh-L3E"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BPe-mA-WpW" secondAttribute="bottom" constant="346" id="D9u-FL-WQN"/>
+                            <constraint firstItem="BPe-mA-WpW" firstAttribute="leading" secondItem="o8F-KU-jCs" secondAttribute="leading" id="Lzf-pv-EVd"/>
+                            <constraint firstItem="HCJ-t1-t04" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Tgq-0D-YX8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HCJ-t1-t04" secondAttribute="bottom" constant="603" id="a4f-qV-qQR"/>
+                            <constraint firstItem="HCJ-t1-t04" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mBi-ev-VXl"/>
+                            <constraint firstItem="BPe-mA-WpW" firstAttribute="trailing" secondItem="o8F-KU-jCs" secondAttribute="trailing" id="tiT-n8-joN"/>
+                            <constraint firstItem="o8F-KU-jCs" firstAttribute="top" secondItem="HCJ-t1-t04" secondAttribute="bottom" id="xDP-qK-mBW"/>
+                            <constraint firstItem="HCJ-t1-t04" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="z3r-w5-YEb"/>
+                            <constraint firstItem="o8F-KU-jCs" firstAttribute="trailing" secondItem="HCJ-t1-t04" secondAttribute="trailing" id="z4z-3E-tCa"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="commentView" destination="BPe-mA-WpW" id="ePS-ZG-nxi"/>
+                        <outlet property="textView" destination="o8F-KU-jCs" id="S7Y-Bf-L55"/>
                         <outlet property="titleLabel" destination="HCJ-t1-t04" id="fkD-xm-ypr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
     </scenes>
 </document>
