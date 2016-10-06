@@ -19,13 +19,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var commentView: UITextView!
+    @IBOutlet weak var itemID: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        titleLabel.rac_text <~ viewModel.titleText.signal
-        textView.rac_text
-
+        titleLabel.rac_text <~ viewModel.titleText
+        textView.rac_text <~ viewModel.itemText
+        commentView.rac_text <~ viewModel.commentText
+        viewModel.itemID <~ itemID.rac_text
 
     }
 
