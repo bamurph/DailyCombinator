@@ -11,6 +11,8 @@
 		B523433D1DA6CB3700AD5550 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B523433C1DA6CB3700AD5550 /* UIKitExtensions.swift */; };
 		B52343561DA6D1A200AD5550 /* ReactiveObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B523434D1DA6D18700AD5550 /* ReactiveObjC.framework */; };
 		B52343571DA6D1E900AD5550 /* ReactiveObjC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B523434D1DA6D18700AD5550 /* ReactiveObjC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B52343651DAD6F7000AD5550 /* HNEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52343641DAD6F7000AD5550 /* HNEnums.swift */; };
+		B52343831DAD819100AD5550 /* HNItems+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52343821DAD819100AD5550 /* HNItems+Protocols.swift */; };
 		B52AC3261DA57C80005ED981 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52AC3251DA57C80005ED981 /* Firebase.framework */; };
 		B52AC3271DA57CC1005ED981 /* Firebase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B52AC3251DA57C80005ED981 /* Firebase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B52AC3291DA57D07005ED981 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52AC3281DA57D07005ED981 /* Security.framework */; };
@@ -295,6 +297,8 @@
 		B52343241DA6C36100AD5550 /* FDataSnapshotExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDataSnapshotExtensions.swift; sourceTree = "<group>"; };
 		B523433C1DA6CB3700AD5550 /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
 		B523433E1DA6D18700AD5550 /* ReactiveObjC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveObjC.xcodeproj; path = ReactiveObjC/ReactiveObjC.xcodeproj; sourceTree = SOURCE_ROOT; };
+		B52343641DAD6F7000AD5550 /* HNEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HNEnums.swift; sourceTree = "<group>"; };
+		B52343821DAD819100AD5550 /* HNItems+Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HNItems+Protocols.swift"; sourceTree = "<group>"; };
 		B52AC3251DA57C80005ED981 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = External/Firebase.framework; sourceTree = "<group>"; };
 		B52AC3281DA57D07005ED981 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B52AC32B1DA57D27005ED981 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -403,6 +407,7 @@
 			children = (
 				B52AC3371DA588D0005ED981 /* HNError.swift */,
 				B52AC3351DA58275005ED981 /* HNService.swift */,
+				B52343641DAD6F7000AD5550 /* HNEnums.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -432,6 +437,7 @@
 		B5A586E81DA56DA600028F5C /* DailyCombinator */ = {
 			isa = PBXGroup;
 			children = (
+				B52343821DAD819100AD5550 /* HNItems+Protocols.swift */,
 				B52343241DA6C36100AD5550 /* FDataSnapshotExtensions.swift */,
 				B523433C1DA6CB3700AD5550 /* UIKitExtensions.swift */,
 				B52AC3341DA58258005ED981 /* Service */,
@@ -893,6 +899,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B52343831DAD819100AD5550 /* HNItems+Protocols.swift in Sources */,
 				B5A586EC1DA56DA600028F5C /* ViewController.swift in Sources */,
 				B52AC3361DA58275005ED981 /* HNService.swift in Sources */,
 				B52AC33D1DA5A389005ED981 /* HNViewModel.swift in Sources */,
@@ -900,6 +907,7 @@
 				B5A586EA1DA56DA600028F5C /* AppDelegate.swift in Sources */,
 				B52AC3381DA588D0005ED981 /* HNError.swift in Sources */,
 				B523433D1DA6CB3700AD5550 /* UIKitExtensions.swift in Sources */,
+				B52343651DAD6F7000AD5550 /* HNEnums.swift in Sources */,
 				B52343251DA6C36100AD5550 /* FDataSnapshotExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

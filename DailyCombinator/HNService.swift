@@ -19,7 +19,6 @@ class HNService {
 
     func signalForItem(_ id: Int) -> SignalProducer<NSDictionary, NSError> {
         return SignalProducer { sink, disposable in
-
             let itemRef = self.rootRef?.child(byAppendingPath: "item/\(id)")
 
             itemRef?.observe(.value, with: { snapshot in
@@ -40,10 +39,22 @@ class HNService {
         }
     }
 
+    func storyIDs(type: HNStoryCollectionType) -> SignalProducer<NSArray, NSError> {
+        return SignalProducer { sink, disposable in
+            let ref = self.rootRef?.child(byAppendingPath: type.rawValue)
+
+            ref?.observe(.value, with: { snapshot in
+                guard let itemArray = snapshot?.value as? NSArray
+                    else { return sink.send(error: HNError.NilResponse.toError()) }
+                sink.send(value: itemArray)
+                sink.sendCompleted()
+            })
+        }
+    }
+
 
     init() {
-
         maxIDUpdateTimer(interval: 5.0).fire()
-
+        
     }
 }
