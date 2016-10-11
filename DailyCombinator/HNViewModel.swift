@@ -15,8 +15,8 @@ import Result
 class HNViewModel {
 
     let newsService = HNService()
+    let maxID = MutableProperty<String>("0")
     let itemID = MutableProperty<String>("121003")
-
     let newsSubscriber = Observer<NSDictionary, NSError>(value: { print("\($0)") })
     let response = MutableProperty<NSDictionary>(NSDictionary())
     let titleText = MutableProperty<String>("")
@@ -38,7 +38,9 @@ class HNViewModel {
                 }
 
         }
+
+        maxID <~ newsService.maxID.map { String($0) }
+        
     }
-    
 }
 

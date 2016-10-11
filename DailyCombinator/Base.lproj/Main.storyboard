@@ -47,14 +47,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUO-Bp-Lnx">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="h0i-xe-ayS" firstAttribute="trailing" secondItem="o8F-KU-jCs" secondAttribute="trailing" id="8LA-ro-pv1"/>
                             <constraint firstItem="BPe-mA-WpW" firstAttribute="top" secondItem="o8F-KU-jCs" secondAttribute="bottom" constant="1" id="Dlj-2n-Itt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DUO-Bp-Lnx" secondAttribute="bottom" constant="8" symbolic="YES" id="JvK-Zz-x25"/>
                             <constraint firstItem="o8F-KU-jCs" firstAttribute="top" secondItem="h0i-xe-ayS" secondAttribute="bottom" constant="6" id="Psu-0y-uwW"/>
                             <constraint firstItem="o8F-KU-jCs" firstAttribute="top" secondItem="HCJ-t1-t04" secondAttribute="bottom" id="Q8d-R9-c5y"/>
                             <constraint firstItem="o8F-KU-jCs" firstAttribute="leading" secondItem="BPe-mA-WpW" secondAttribute="leading" id="RbT-Ic-VNG"/>
+                            <constraint firstItem="DUO-Bp-Lnx" firstAttribute="trailing" secondItem="BPe-mA-WpW" secondAttribute="trailing" id="YFp-rF-i0l"/>
                             <constraint firstItem="HCJ-t1-t04" firstAttribute="leading" secondItem="o8F-KU-jCs" secondAttribute="leading" id="YII-dK-wB4"/>
                             <constraint firstItem="HCJ-t1-t04" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="av1-yy-bkJ"/>
                             <constraint firstItem="o8F-KU-jCs" firstAttribute="trailing" secondItem="BPe-mA-WpW" secondAttribute="trailing" id="dAc-fj-iIM"/>
@@ -68,6 +75,7 @@
                     <connections>
                         <outlet property="commentView" destination="BPe-mA-WpW" id="ePS-ZG-nxi"/>
                         <outlet property="itemID" destination="h0i-xe-ayS" id="ZGc-1I-ezW"/>
+                        <outlet property="maxID" destination="DUO-Bp-Lnx" id="6r7-YY-Dgn"/>
                         <outlet property="textView" destination="o8F-KU-jCs" id="S7Y-Bf-L55"/>
                         <outlet property="titleLabel" destination="HCJ-t1-t04" id="fkD-xm-ypr"/>
                     </connections>

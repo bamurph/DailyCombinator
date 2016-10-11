@@ -10,24 +10,40 @@ import Foundation
 import Firebase
 import ReactiveCocoa
 import ReactiveSwift
-
+import Result
 class HNService {
     private let rootRef = Firebase(url: "https://hacker-news.firebaseio.com/v0/")
 
-    func itemRef(_ id: Int) -> Firebase? {
-        return rootRef?.child(byAppendingPath: "item/\(id)")
-    }
+    let maxID = MutableProperty<Int>(0)
+
 
     func signalForItem(_ id: Int) -> SignalProducer<NSDictionary, NSError> {
         return SignalProducer { sink, disposable in
 
-            self.itemRef(id)?.observe(.value, with: { snapshot in
+            let itemRef = self.rootRef?.child(byAppendingPath: "item/\(id)")
+
+            itemRef?.observe(.value, with: { snapshot in
                 guard let itemDict = snapshot?.value as? NSDictionary
-                    else { return sink.send(error: HNError.Canceled.toError()) }
+                    else { return sink.send(error: HNError.NilResponse.toError()) }
                 sink.send(value: itemDict)
                 sink.sendCompleted()
             })
         }
     }
 
+    func maxIDUpdateTimer(interval: TimeInterval) -> Timer  {
+        let maxIDRef = rootRef?.child(byAppendingPath: "maxitem")
+        return Timer.init(timeInterval: interval, repeats: true) { _ in
+            maxIDRef?.observe(.value, with: { snapshot in
+                self.maxID.value = (snapshot?.value as? Int) ?? self.maxID.value
+            })
+        }
+    }
+
+
+    init() {
+
+        maxIDUpdateTimer(interval: 5.0).fire()
+
+    }
 }
