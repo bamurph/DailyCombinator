@@ -19,7 +19,7 @@ class HNViewModel {
     let itemID = MutableProperty<String>("121003")
 
     let topStories = MutableProperty<[NSDictionary]>([])
-
+    let topStoryString = MutableProperty<String>("")
     let newsSubscriber = Observer<NSDictionary, NSError>(value: { print("\($0)") })
     let response = MutableProperty<NSDictionary>(NSDictionary())
     let titleText = MutableProperty<String>("")
@@ -50,7 +50,8 @@ class HNViewModel {
             .on(value: { ids in
                 self.newsService.signalForItems(ids: ids)
                     .observe(on: QueueScheduler.main)
-                    .on(value: { print($0) })
+                    .on(value: { self.topStoryString.value.append("\n\n \($0)") })
+                    .take(first: <#T##Int#>)
                     .start()
 
             }).start()

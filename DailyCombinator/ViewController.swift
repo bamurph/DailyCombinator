@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         maxID.rac_text <~ viewModel.maxID.map { "\($0)" }
         titleLabel.rac_text <~ viewModel.titleText
-        textView.rac_text <~ viewModel.itemText
+        textView.rac_text <~ viewModel.topStoryString
         commentView.rac_text <~ viewModel.commentText
         viewModel.itemID <~ itemID.rac_text
         maxID.rac_text <~ viewModel.maxID
