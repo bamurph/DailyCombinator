@@ -9,7 +9,6 @@
 import UIKit
 import ReactiveCocoa
 import ReactiveSwift
-import ReactiveObjC
 
 struct AssociationKey {
     static var hidden: UInt8 = 1
