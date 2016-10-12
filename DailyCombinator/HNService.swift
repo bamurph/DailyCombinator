@@ -10,25 +10,63 @@ import Foundation
 import Firebase
 import ReactiveCocoa
 import ReactiveSwift
-
+import Result
 class HNService {
     private let rootRef = Firebase(url: "https://hacker-news.firebaseio.com/v0/")
 
-    func itemRef(_ id: Int) -> Firebase? {
-        return rootRef?.child(byAppendingPath: "item/\(id)")
-    }
-
-    func requestAccessToItem(_ id: Int) -> SignalProducer<FDataSnapshot, NSError> {
+    let maxID = MutableProperty<Int>(0)
 
 
-        return SignalProducer {
-            (observer: Observer<FDataSnapshot, NSError>, _) in
-            self.itemRef(id)?.observe(.value, with: { snapshot in
-                guard let s = snapshot
-                    else { return observer.send(error: HNError.Canceled.toError()) }
-                observer.send(value: s)
-                observer.sendCompleted()
+    func signalForItem(_ id: Int) -> SignalProducer<NSDictionary, NSError> {
+        return SignalProducer { sink, disposable in
+            let itemRef = self.rootRef?.child(byAppendingPath: "item/\(id)")
+
+            itemRef?.observe(.value, with: { snapshot in
+                guard let itemDict = snapshot?.value as? NSDictionary
+                    else { return sink.send(error: HNError.NilResponse.toError()) }
+                sink.send(value: itemDict)
+                sink.sendCompleted()
             })
         }
+    }
+
+    func signalForItems(ids: [Int]) -> SignalProducer<NSDictionary, NoError> {
+        let producer = SignalProducer<NSDictionary, NoError> { observer, _ in
+            ids.forEach {
+                self.signalForItem($0)
+                    .observe(on: QueueScheduler.main)
+                    .on(value: { observer.send(value: $0) })
+                    .start()
+                }
+        }
+        return producer
+    }
+
+    func maxIDUpdateTimer(interval: TimeInterval) -> Timer  {
+        let maxIDRef = rootRef?.child(byAppendingPath: "maxitem")
+        return Timer.init(timeInterval: interval, repeats: true) { _ in
+            maxIDRef?.observe(.value, with: { snapshot in
+                self.maxID.value = (snapshot?.value as? Int) ?? self.maxID.value
+            })
+        }
+    }
+
+    func storyIDs(type: HNStoryCollectionType) -> SignalProducer<[Int], NSError> {
+        return SignalProducer { sink, disposable in
+            let ref = self.rootRef?.child(byAppendingPath: type.rawValue)
+
+            ref?.observe(.value, with: { snapshot in
+                guard let itemArray = snapshot?.value as? NSArray
+                    else { return sink.send(error: HNError.NilResponse.toError()) }
+                sink.send(value: itemArray as! [Int])
+                sink.sendCompleted()
+            })
+        }
+    }
+
+
+    init() {
+        maxIDUpdateTimer(interval: 5.0).fire()
+        
     }
 }

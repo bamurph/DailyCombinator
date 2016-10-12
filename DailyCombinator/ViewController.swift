@@ -9,24 +9,33 @@
 import UIKit
 import ReactiveCocoa
 import ReactiveSwift
+import ReactiveObjC
 import Firebase
 
 class ViewController: UIViewController {
 
-    let newsService = HNService()
-    let subscriber = Observer<FDataSnapshot, NSError>(value: { print("\($0)") })
+    let viewModel = HNViewModel()
+
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var commentView: UITextView!
+    @IBOutlet weak var itemID: UITextField!
+    @IBOutlet weak var maxID: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        newsService.requestAccessToItem(8000)
-            .start(subscriber)
+        maxID.rac_text <~ viewModel.maxID.map { "\($0)" }
+        titleLabel.rac_text <~ viewModel.titleText
+        textView.rac_text <~ viewModel.topStoryString
+        commentView.rac_text <~ viewModel.commentText
+        viewModel.itemID <~ itemID.rac_text
+        maxID.rac_text <~ viewModel.maxID
 
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
     }
 
 

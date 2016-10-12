@@ -2,3 +2,6 @@
 	path = External/ReactiveCocoa
 	url = git@github.com:ReactiveCocoa/ReactiveCocoa.git
   ignore = dirty
+[submodule "ReactiveObjC"]
+	path = ReactiveObjC
+	url = git@github.com:ReactiveCocoa/ReactiveObjC.git
