@@ -14,12 +14,14 @@ protocol HNItemBase {
     var time: Date? { get }
 }
 
-extension HNItemBase {
-    var id: Int { get }
-    var by: String? { get }
-    var time: Date? { get }
-}
-
 protocol HasText {
     var text: String? { get }
+}
+
+struct HNStory: HNItemBase, HasText {
+    internal var id: Int
+    internal var by: String?
+    internal var text: String?
+    internal var time: Date?
+
 }

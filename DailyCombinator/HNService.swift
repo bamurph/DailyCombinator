@@ -30,6 +30,18 @@ class HNService {
         }
     }
 
+    func signalForItems(ids: [Int]) -> SignalProducer<NSDictionary, NoError> {
+        let producer = SignalProducer<NSDictionary, NoError> { observer, _ in
+            ids.forEach {
+                self.signalForItem($0)
+                    .observe(on: QueueScheduler.main)
+                    .on(value: { observer.send(value: $0) })
+                    .start()
+                }
+        }
+        return producer
+    }
+
     func maxIDUpdateTimer(interval: TimeInterval) -> Timer  {
         let maxIDRef = rootRef?.child(byAppendingPath: "maxitem")
         return Timer.init(timeInterval: interval, repeats: true) { _ in
@@ -39,14 +51,14 @@ class HNService {
         }
     }
 
-    func storyIDs(type: HNStoryCollectionType) -> SignalProducer<NSArray, NSError> {
+    func storyIDs(type: HNStoryCollectionType) -> SignalProducer<[Int], NSError> {
         return SignalProducer { sink, disposable in
             let ref = self.rootRef?.child(byAppendingPath: type.rawValue)
 
             ref?.observe(.value, with: { snapshot in
                 guard let itemArray = snapshot?.value as? NSArray
                     else { return sink.send(error: HNError.NilResponse.toError()) }
-                sink.send(value: itemArray)
+                sink.send(value: itemArray as! [Int])
                 sink.sendCompleted()
             })
         }
