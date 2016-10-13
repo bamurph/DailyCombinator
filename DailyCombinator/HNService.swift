@@ -38,6 +38,7 @@ class HNService {
                     .on(value: { observer.send(value: $0) })
                     .start()
                 }
+            observer.sendCompleted()
         }
         return producer
     }
