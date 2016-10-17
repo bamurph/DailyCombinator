@@ -43,10 +43,10 @@ class StoryTableViewModel {
                                     newTopStories.value.append(dict)
                                 })
 
-                                observer.observeCompleted {
-                                    print("I'm done getting story dicts")
-                                    self.topStories.value = newTopStories.value
-                                }
+//                                observer.observeCompleted {
+//                                    print("I'm done getting story dicts")
+//                                    self.topStories.value = newTopStories.value
+//                                }
                         }
 //                            .observe(on: QueueScheduler.main)
 //                            .on(value: { self.topStories.value.append($0) },
