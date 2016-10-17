@@ -31,14 +31,21 @@ class HNService {
     }
 
     func signalForItems(ids: [Int]) -> SignalProducer<NSDictionary, NoError> {
+        let itemSignals = ids.map { signalForItem($0) }
+
+        /// figure out how to map/flatmap these itemsignals to a single signal (oh my)
+        itemSignals.fl
+
         let producer = SignalProducer<NSDictionary, NoError> { observer, _ in
+
+
             ids.forEach {
                 self.signalForItem($0)
                     .observe(on: QueueScheduler.main)
                     .on(value: { observer.send(value: $0) })
                     .start()
                 }
-            observer.sendCompleted()
+            //observer.sendCompleted()
         }
         return producer
     }
