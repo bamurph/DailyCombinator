@@ -31,29 +31,35 @@ class StoryTableViewModel {
         let (refreshSignal, refreshObserver) = Signal<Void, NoError>.pipe()
         self.refreshObserver = refreshObserver
 
+        let topStoriesSubscriber = Observer<Void, NoError>(value: { self.fetchTopStories(refreshSignal: refreshSignal, count: 15)
+        })
+        refreshSignal.observe(topStoriesSubscriber)
+        refreshObserver.send(value: ())
+    }
+
+    func fetchTopStories(refreshSignal: Signal<Void, NoError>, count: Int) {
         SignalProducer(signal: refreshSignal)
             .startWithValues {
                 self.newsService.storyIDs(type: .top)
                     .on(value: { ids in
                         let newTopStories = MutableProperty<[NSDictionary]>([])
                         self.newsService.signalForItems(ids: ids)
+                            .take(first: count)
                             .startWithSignal { (observer, disposable) -> () in
                                 observer.observeValues({ dict in
                                     print(dict)
                                     newTopStories.value.append(dict)
                                 })
 
-//                                observer.observeCompleted {
-//                                    print("I'm done getting story dicts")
-//                                    self.topStories.value = newTopStories.value
-//                                }
+                                observer.observeCompleted {
+                                    print("Completed!")
+                                    self.topStories.value = newTopStories.value
+
+                                }
                         }
-//                            .observe(on: QueueScheduler.main)
-//                            .on(value: { self.topStories.value.append($0) },
-//                                completed: { print("I'm done fetching items")})
-//                            .take(first: 5)
-//                            .start()
-                    }).start()
+                    })
+
+                    .start()
         }
 
     }

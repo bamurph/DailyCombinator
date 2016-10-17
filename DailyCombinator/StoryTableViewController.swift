@@ -29,7 +29,8 @@ class StoryTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        refreshControlTriggered()
+
+        bindViewModel()
     }
 
     // MARK: - Bindings
@@ -40,7 +41,7 @@ class StoryTableViewController: UITableViewController {
                 print("Table view reloading data")
                 self?.tableView.reloadData()
         }
-
+        viewModel.refreshObserver.send(value: ())
     }
 
     // MARK: - User Interaction
@@ -65,7 +66,7 @@ class StoryTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: storyCellIdentifier, for: indexPath)
 
         // Configure the cell...
-        print(indexPath.item)
+        //print(indexPath.item)
         cell.textLabel?.text = viewModel.storyTitleAtIndexPath(indexPath: indexPath)
         return cell
     }
