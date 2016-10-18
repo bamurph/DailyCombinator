@@ -31,15 +31,13 @@ class HNService {
     }
 
     func signalForItems(ids: [Int]) -> SignalProducer<NSDictionary, NoError> {
-        let producer = SignalProducer<NSDictionary, NoError> { observer, _ in
-            ids.forEach {
-                self.signalForItem($0)
-                    .observe(on: QueueScheduler.main)
-                    .on(value: { observer.send(value: $0) })
-                    .start()
-                }
-        }
-        return producer
+        let itemSignals = ids.map { signalForItem($0) }
+        let producers: SignalProducer<SignalProducer<NSDictionary, NSError>, NoError> = SignalProducer(values: itemSignals)
+        let merged: SignalProducer<NSDictionary, NSError> = producers.flatten(.merge)
+
+        return merged.flatMapError { _ in .empty }
+
+
     }
 
     func maxIDUpdateTimer(interval: TimeInterval) -> Timer  {
@@ -58,6 +56,7 @@ class HNService {
             ref?.observe(.value, with: { snapshot in
                 guard let itemArray = snapshot?.value as? NSArray
                     else { return sink.send(error: HNError.NilResponse.toError()) }
+
                 sink.send(value: itemArray as! [Int])
                 sink.sendCompleted()
             })

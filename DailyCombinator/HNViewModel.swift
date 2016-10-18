@@ -51,7 +51,7 @@ class HNViewModel {
                 self.newsService.signalForItems(ids: ids)
                     .observe(on: QueueScheduler.main)
                     .on(value: { self.topStoryString.value.append("\n\n \($0)") })
-                    .take(first: <#T##Int#>)
+                    .take(first: 5)
                     .start()
 
             }).start()
