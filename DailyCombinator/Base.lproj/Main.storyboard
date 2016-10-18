@@ -9,7 +9,7 @@
         <!--Story Table View Controller-->
         <scene sceneID="F5x-ZY-rg1">
             <objects>
-                <tableViewController id="ARv-DK-ih5" customClass="StoryTableViewController" customModule="DailyCombinator" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TopStoriesTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ARv-DK-ih5" customClass="StoryTableViewController" customModule="DailyCombinator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6H9-H5-54g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,7 +48,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZFI-hT-5ea" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="389" y="-30"/>
+            <point key="canvasLocation" x="405" y="-81"/>
         </scene>
         <!--Item Table View Controller-->
         <scene sceneID="raV-og-5zU">
@@ -59,7 +59,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Qag-uU-j0J">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemTableViewCell" id="Qag-uU-j0J">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qag-uU-j0J" id="zrn-kA-V4e">

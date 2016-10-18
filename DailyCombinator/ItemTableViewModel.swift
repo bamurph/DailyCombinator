@@ -17,5 +17,11 @@ class ItemTableViewModel {
     let newsService = HNService()
     let itemID = MutableProperty<Int>(0)
 
+    init() {
 
+    }
+
+    func itemTreeSignal(id: Int) {
+        //self.newsService.signalForItem
+    }
 }

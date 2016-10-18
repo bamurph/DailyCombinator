@@ -1,20 +1,26 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "77C31B82137B9721EF73BD9A8D17DEC8F3679242",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "77C31B82137B9721EF73BD9A8D17DEC8F3679242+++B81F58A",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "E084C86B03F81D63323C9E7510697EA528A758C7" : 9223372036854775807,
-    "51B210D0D41486D3ADD6940D57E4480BBD4DE4C5" : 9223372036854775807,
-    "956D2B21DD155C49504BB67697A67F7C5351A353" : 9223372036854775807,
-    "77C31B82137B9721EF73BD9A8D17DEC8F3679242" : 9223372036854775807
+    "51B210D0D41486D3ADD6940D57E4480BBD4DE4C5+++8C4B3DF" : 9223372036854775807,
+    "E084C86B03F81D63323C9E7510697EA528A758C7+++E241138" : 9223372036854775807,
+    "E084C86B03F81D63323C9E7510697EA528A758C7+++9353352" : 9223372036854775807,
+    "E084C86B03F81D63323C9E7510697EA528A758C7+++22044CA" : 9223372036854775807,
+    "77C31B82137B9721EF73BD9A8D17DEC8F3679242+++B81F58A" : 9223372036854775807,
+    "51B210D0D41486D3ADD6940D57E4480BBD4DE4C5+++CC9C14C" : 9223372036854775807,
+    "956D2B21DD155C49504BB67697A67F7C5351A353+++B95EBD9" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5B986682-EC58-41E4-BB29-30F393078C80",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "E084C86B03F81D63323C9E7510697EA528A758C7" : "DailyCombinator\/ReactiveObjC\/Carthage\/Checkouts\/xcconfigs\/",
-    "51B210D0D41486D3ADD6940D57E4480BBD4DE4C5" : "DailyCombinator\/External\/ReactiveCocoa\/Carthage\/Checkouts\/ReactiveSwift\/",
-    "956D2B21DD155C49504BB67697A67F7C5351A353" : "DailyCombinator\/External\/ReactiveCocoa\/Carthage\/Checkouts\/Result\/",
-    "77C31B82137B9721EF73BD9A8D17DEC8F3679242" : "DailyCombinator\/"
+    "51B210D0D41486D3ADD6940D57E4480BBD4DE4C5+++8C4B3DF" : "DailyCombinator\/External\/ReactiveCocoa\/Carthage\/Checkouts\/ReactiveSwift\/",
+    "E084C86B03F81D63323C9E7510697EA528A758C7+++E241138" : "DailyCombinator\/External\/ReactiveCocoa\/Carthage\/Checkouts\/xcconfigs\/",
+    "E084C86B03F81D63323C9E7510697EA528A758C7+++9353352" : "DailyCombinator\/External\/ReactiveCocoa\/Carthage\/Checkouts\/ReactiveSwift\/Carthage\/Checkouts\/xcconfigs\/",
+    "E084C86B03F81D63323C9E7510697EA528A758C7+++22044CA" : "DailyCombinator\/ReactiveObjC\/Carthage\/Checkouts\/xcconfigs\/",
+    "77C31B82137B9721EF73BD9A8D17DEC8F3679242+++B81F58A" : "DailyCombinator\/",
+    "51B210D0D41486D3ADD6940D57E4480BBD4DE4C5+++CC9C14C" : "DailyCombinator\/External\/ReactiveCocoa\/",
+    "956D2B21DD155C49504BB67697A67F7C5351A353+++B95EBD9" : "DailyCombinator\/External\/ReactiveCocoa\/Carthage\/Checkouts\/Result\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "DailyCombinator",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -23,22 +29,37 @@
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:ReactiveCocoa\/ReactiveCocoa.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "51B210D0D41486D3ADD6940D57E4480BBD4DE4C5"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "51B210D0D41486D3ADD6940D57E4480BBD4DE4C5+++8C4B3DF"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ReactiveCocoa\/ReactiveCocoa",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "51B210D0D41486D3ADD6940D57E4480BBD4DE4C5+++CC9C14C"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:bamurph\/DailyCombinator.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "77C31B82137B9721EF73BD9A8D17DEC8F3679242"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "77C31B82137B9721EF73BD9A8D17DEC8F3679242+++B81F58A"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/antitypical\/Result.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "956D2B21DD155C49504BB67697A67F7C5351A353"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "956D2B21DD155C49504BB67697A67F7C5351A353+++B95EBD9"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jspahrsummers\/xcconfigs.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E084C86B03F81D63323C9E7510697EA528A758C7"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E084C86B03F81D63323C9E7510697EA528A758C7+++22044CA"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jspahrsummers\/xcconfigs.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E084C86B03F81D63323C9E7510697EA528A758C7+++9353352"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jspahrsummers\/xcconfigs.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E084C86B03F81D63323C9E7510697EA528A758C7+++E241138"
     }
   ]
 }
