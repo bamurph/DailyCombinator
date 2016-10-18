@@ -1,73 +1,51 @@
 //
-//  StoryTableViewController.swift
+//  ItemTableViewController.swift
 //  DailyCombinator
 //
-//  Created by Ben Murphy on 10/12/16.
+//  Created by Ben Murphy on 10/18/16.
 //  Copyright © 2016 Constellation Software. All rights reserved.
 //
 
 import UIKit
-import ReactiveCocoa
-import ReactiveSwift
-import Result
 
-class StoryTableViewController: UITableViewController {
-
-    private let viewModel = StoryTableViewModel()
-    private let storyCellIdentifier = "StoryCell"
+class ItemTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.refreshControl = UIRefreshControl()
-        self.refreshControl?.addTarget(self, action: #selector(refreshControlTriggered), for: .valueChanged)
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
 
-
-        
-        self.tableView.contentInset.top = 20
-
-        bindViewModel()
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
-    // MARK: - Bindings
-    private func bindViewModel() {
-        viewModel.topStories.signal
-            .observe(on: UIScheduler())
-            .observeValues { [weak self] stories in
-                print("Table view reloading data")
-                self?.refreshControl?.endRefreshing()
-                self?.tableView.reloadData()
-        }
-        viewModel.refreshObserver.send(value: ())
-    }
-
-    // MARK: - User Interaction
-    func refreshControlTriggered() {
-        viewModel.refreshObserver.send(value: ())
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return viewModel.numberOfSections()
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return viewModel.numberOfStoriesInSection(section: section)
+        return 0
     }
 
-
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: storyCellIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
-        //print(indexPath.item)
-        cell.textLabel?.text = viewModel.storyTitleAtIndexPath(indexPath: indexPath)
+
         return cell
     }
-
+    */
 
     /*
     // Override to support conditional editing of the table view.
