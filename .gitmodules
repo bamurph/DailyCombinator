@@ -3,3 +3,6 @@
   url = https://github.com/ReactiveCocoa/ReactiveCocoa
   ignore = dirty
 
+[submodule "External/External/Result"]
+	path = External/External/Result
+	url = https://github.com/antitypical/Result.git
