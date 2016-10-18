@@ -40,8 +40,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-<<<<<<< master
-=======
 		B5731F671DAED443003A80AB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B5731F5D1DAED442003A80AB /* ReactiveCocoa.xcodeproj */;
@@ -154,7 +152,6 @@
 			remoteGlobalIDString = D047260B19E49F82006002AA;
 			remoteInfo = "ReactiveCocoa-iOS";
 		};
->>>>>>> Re-init submodules for RACocoa
 		B5A586FE1DA56DA600028F5C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B5A586DE1DA56DA600028F5C /* Project object */;
@@ -190,10 +187,7 @@
 				B52AC3271DA57CC1005ED981 /* Firebase.framework in Embed Frameworks */,
 				B5A5914B1DA5737000028F5C /* Result.framework in Embed Frameworks */,
 				B5A5914E1DA5737000028F5C /* ReactiveSwift.framework in Embed Frameworks */,
-<<<<<<< master
-=======
 				B5731FA91DAED485003A80AB /* ReactiveCocoa.framework in Embed Frameworks */,
->>>>>>> Re-init submodules for RACocoa
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,10 +242,7 @@
 				B52AC3291DA57D07005ED981 /* Security.framework in Frameworks */,
 				B52AC3261DA57C80005ED981 /* Firebase.framework in Frameworks */,
 				B5A5914A1DA5737000028F5C /* Result.framework in Frameworks */,
-<<<<<<< master
-=======
 				B5731FA81DAED485003A80AB /* ReactiveCocoa.framework in Frameworks */,
->>>>>>> Re-init submodules for RACocoa
 				B5A5914D1DA5737000028F5C /* ReactiveSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,8 +265,6 @@
 
 /* Begin PBXGroup section */
 		B52AC3331DA58253005ED981 /* ViewModel */ = {
-<<<<<<< master
-=======
 			isa = PBXGroup;
 			children = (
 				B52AC33C1DA5A389005ED981 /* HNViewModel.swift */,
@@ -314,7 +303,6 @@
 			sourceTree = "<group>";
 		};
 		B5731F5E1DAED442003A80AB /* Products */ = {
->>>>>>> Re-init submodules for RACocoa
 			isa = PBXGroup;
 			children = (
 				B5731F681DAED443003A80AB /* ReactiveCocoa.framework */,
@@ -403,11 +391,8 @@
 		B5A591431DA572A200028F5C /* External */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< master
-=======
 				B5731F8D1DAED465003A80AB /* Result.xcodeproj */,
 				B5731F5D1DAED442003A80AB /* ReactiveCocoa.xcodeproj */,
->>>>>>> Re-init submodules for RACocoa
 			);
 			name = External;
 			path = External/ReactiveCocoa/Carthage/Checkouts/Result;
@@ -444,10 +429,7 @@
 			buildRules = (
 			);
 			dependencies = (
-<<<<<<< master
-=======
 				B5731FAB1DAED485003A80AB /* PBXTargetDependency */,
->>>>>>> Re-init submodules for RACocoa
 			);
 			name = DailyCombinator;
 			productName = DailyCombinator;
@@ -530,8 +512,6 @@
 			mainGroup = B5A586DD1DA56DA600028F5C;
 			productRefGroup = B5A586E71DA56DA600028F5C /* Products */;
 			projectDirPath = "";
-<<<<<<< master
-=======
 			projectReferences = (
 				{
 					ProductGroup = B5731F5E1DAED442003A80AB /* Products */;
@@ -542,7 +522,6 @@
 					ProjectRef = B5731F8D1DAED465003A80AB /* Result.xcodeproj */;
 				},
 			);
->>>>>>> Re-init submodules for RACocoa
 			projectRoot = "";
 			targets = (
 				B5A586E51DA56DA600028F5C /* DailyCombinator */,
@@ -552,8 +531,6 @@
 		};
 /* End PBXProject section */
 
-<<<<<<< master
-=======
 /* Begin PBXReferenceProxy section */
 		B5731F681DAED443003A80AB /* ReactiveCocoa.framework */ = {
 			isa = PBXReferenceProxy;
@@ -662,7 +639,6 @@
 		};
 /* End PBXReferenceProxy section */
 
->>>>>>> Re-init submodules for RACocoa
 /* Begin PBXResourcesBuildPhase section */
 		B5A586E41DA56DA600028F5C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
@@ -729,14 +705,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-<<<<<<< master
-=======
 		B5731FAB1DAED485003A80AB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "ReactiveCocoa-iOS";
 			targetProxy = B5731FAA1DAED485003A80AB /* PBXContainerItemProxy */;
 		};
->>>>>>> Re-init submodules for RACocoa
 		B5A586FF1DA56DA600028F5C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B5A586E51DA56DA600028F5C /* DailyCombinator */;
