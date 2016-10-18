@@ -8,9 +8,8 @@
 
 import UIKit
 import ReactiveCocoa
-import ReactiveSwift
-import ReactiveObjC
 import Firebase
+import ReactiveSwift
 
 class ViewController: UIViewController {
 
