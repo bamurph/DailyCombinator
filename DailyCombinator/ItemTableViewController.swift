@@ -7,22 +7,24 @@
 //
 
 import UIKit
+import ReactiveCocoa
+import ReactiveSwift
+import Result
 
 class ItemTableViewController: UITableViewController {
+
+    private let viewModel = ItemTableViewModel()
+    // TODO: - Inject itemID via storyboard segue
+    private let itemID = MutableProperty<Int>(12734671)
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        bindViewModel()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    private func bindViewModel() {
+        viewModel.itemID <~ itemID
     }
 
     // MARK: - Table view data source

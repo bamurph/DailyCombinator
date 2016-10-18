@@ -38,6 +38,7 @@
 		B5A5914E1DA5737000028F5C /* ReactiveSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5A5914C1DA5737000028F5C /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B5E5F4801DB68D13002363D0 /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F47F1DB68D13002363D0 /* ItemTableViewController.swift */; };
 		B5E5F4821DB68DD0002363D0 /* TopStoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F4811DB68DD0002363D0 /* TopStoriesTableViewController.swift */; };
+		B5E5F4841DB68E27002363D0 /* ItemTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F4831DB68E27002363D0 /* ItemTableViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -230,6 +231,7 @@
 		B5A5914C1DA5737000028F5C /* ReactiveSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReactiveSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E5F47F1DB68D13002363D0 /* ItemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewController.swift; sourceTree = "<group>"; };
 		B5E5F4811DB68DD0002363D0 /* TopStoriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopStoriesTableViewController.swift; sourceTree = "<group>"; };
+		B5E5F4831DB68E27002363D0 /* ItemTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +271,7 @@
 		B52AC3331DA58253005ED981 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B5E5F4831DB68E27002363D0 /* ItemTableViewModel.swift */,
 				B52AC33C1DA5A389005ED981 /* HNViewModel.swift */,
 				B5688DC91DAED8C0001AEED2 /* TopStoriesTableViewModel.swift */,
 			);
@@ -678,6 +681,7 @@
 				B5A586EC1DA56DA600028F5C /* ViewController.swift in Sources */,
 				B52AC3361DA58275005ED981 /* HNService.swift in Sources */,
 				B52AC33D1DA5A389005ED981 /* HNViewModel.swift in Sources */,
+				B5E5F4841DB68E27002363D0 /* ItemTableViewModel.swift in Sources */,
 				B5688DCA1DAED8C0001AEED2 /* TopStoriesTableViewModel.swift in Sources */,
 				B5A586F21DA56DA600028F5C /* DailyCombinator.xcdatamodeld in Sources */,
 				B5A586EA1DA56DA600028F5C /* AppDelegate.swift in Sources */,
