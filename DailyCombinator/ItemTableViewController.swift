@@ -21,6 +21,12 @@ class ItemTableViewController: UITableViewController {
         super.viewDidLoad()
 
         bindViewModel()
+        viewModel.itemTreeSignal(id: itemID.value).startWithValues { node in
+            print("Node ID: \(node.value)")
+            let kidsStrings = node.kids.map { "\($0)" }
+                .joined(separator: ", ")
+            print("Kids: \(kidsStrings)")
+        }
     }
 
     private func bindViewModel() {
