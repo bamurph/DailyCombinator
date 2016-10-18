@@ -1,5 +1,5 @@
 [submodule "External/ReactiveCocoa"]
-	path = External/ReactiveCocoa
-	url = https://github.com/ReactiveCocoa/ReactiveCocoa
+  path = External/ReactiveCocoa
+  url = https://github.com/ReactiveCocoa/ReactiveCocoa
   ignore = dirty
 
