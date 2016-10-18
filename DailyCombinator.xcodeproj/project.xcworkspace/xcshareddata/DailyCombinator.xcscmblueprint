@@ -5,6 +5,8 @@
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "51B210D0D41486D3ADD6940D57E4480BBD4DE4C5+++8C4B3DF" : 9223372036854775807,
+    "51B210D0D41486D3ADD6940D57E4480BBD4DE4C5+++9D827DC" : 9223372036854775807,
+    "51B210D0D41486D3ADD6940D57E4480BBD4DE4C5+++3EAC9DA" : 9223372036854775807,
     "E084C86B03F81D63323C9E7510697EA528A758C7+++E241138" : 9223372036854775807,
     "E084C86B03F81D63323C9E7510697EA528A758C7+++9353352" : 9223372036854775807,
     "E084C86B03F81D63323C9E7510697EA528A758C7+++22044CA" : 9223372036854775807,
@@ -15,6 +17,8 @@
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5B986682-EC58-41E4-BB29-30F393078C80",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "51B210D0D41486D3ADD6940D57E4480BBD4DE4C5+++8C4B3DF" : "DailyCombinator\/External\/ReactiveCocoa\/Carthage\/Checkouts\/ReactiveSwift\/",
+    "51B210D0D41486D3ADD6940D57E4480BBD4DE4C5+++9D827DC" : "ReactiveCocoa\/",
+    "51B210D0D41486D3ADD6940D57E4480BBD4DE4C5+++3EAC9DA" : "ReactiveCocoa\/Carthage\/Checkouts\/ReactiveSwift\/",
     "E084C86B03F81D63323C9E7510697EA528A758C7+++E241138" : "DailyCombinator\/External\/ReactiveCocoa\/Carthage\/Checkouts\/xcconfigs\/",
     "E084C86B03F81D63323C9E7510697EA528A758C7+++9353352" : "DailyCombinator\/External\/ReactiveCocoa\/Carthage\/Checkouts\/ReactiveSwift\/Carthage\/Checkouts\/xcconfigs\/",
     "E084C86B03F81D63323C9E7510697EA528A758C7+++22044CA" : "DailyCombinator\/ReactiveObjC\/Carthage\/Checkouts\/xcconfigs\/",
@@ -27,9 +31,19 @@
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "DailyCombinator.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ReactiveCocoa\/ReactiveSwift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "51B210D0D41486D3ADD6940D57E4480BBD4DE4C5+++3EAC9DA"
+    },
+    {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:ReactiveCocoa\/ReactiveCocoa.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "51B210D0D41486D3ADD6940D57E4480BBD4DE4C5+++8C4B3DF"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/bamurph\/ReactiveCocoa.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "51B210D0D41486D3ADD6940D57E4480BBD4DE4C5+++9D827DC"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ReactiveCocoa\/ReactiveCocoa",

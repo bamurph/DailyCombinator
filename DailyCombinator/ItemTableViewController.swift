@@ -16,11 +16,17 @@ class ItemTableViewController: UITableViewController {
     private let viewModel = ItemTableViewModel()
     // TODO: - Inject itemID via storyboard segue
     private let itemID = MutableProperty<Int>(12734671)
+    private let dicts = MutableProperty<[NSDictionary]>([])
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         bindViewModel()
+        viewModel.itemTreeSignal(id: itemID.value)
+            .startWithValues { dict in
+                self.dicts.value.append(dict)
+                print(dict)
+        }
     }
 
     private func bindViewModel() {
