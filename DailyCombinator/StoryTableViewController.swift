@@ -24,11 +24,7 @@ class StoryTableViewController: UITableViewController {
 
 
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.tableView.contentInset.top = 20
 
         bindViewModel()
     }
@@ -39,6 +35,7 @@ class StoryTableViewController: UITableViewController {
             .observe(on: UIScheduler())
             .observeValues { [weak self] stories in
                 print("Table view reloading data")
+                self?.refreshControl?.endRefreshing()
                 self?.tableView.reloadData()
         }
         viewModel.refreshObserver.send(value: ())
