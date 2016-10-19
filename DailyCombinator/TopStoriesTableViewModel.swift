@@ -15,7 +15,7 @@ import Firebase
 class TopStoriesTableViewModel {
 
     let newsService = HNService()
-    let topStories = MutableProperty<[NSDictionary]>([])
+    let topStories = MutableProperty<[HNItem]>([])
 
 
     // Inputs
@@ -42,7 +42,7 @@ class TopStoriesTableViewModel {
             .startWithValues {
                 self.newsService.storyIDs(type: .top)
                     .on(value: { ids in
-                        let newTopStories = MutableProperty<[NSDictionary]>([])
+                        let newTopStories = MutableProperty<[HNItem]>([])
                         self.newsService.signalForItems(ids: ids)
                             .take(first: count)
                             .startWithSignal { (observer, disposable) -> () in
@@ -72,11 +72,11 @@ class TopStoriesTableViewModel {
         return topStories.value.count
     }
 
-    func storyAtIndexPath(indexPath: IndexPath) -> NSDictionary {
+    func storyAtIndexPath(indexPath: IndexPath) -> HNItem {
         return topStories.value[indexPath.row]
     }
 
     func storyTitleAtIndexPath(indexPath: IndexPath) -> String {
-        return storyAtIndexPath(indexPath: indexPath).value(forKey: "title") as? String ?? ""
+        return storyAtIndexPath(indexPath: indexPath).text ?? "noText"
     }
 }

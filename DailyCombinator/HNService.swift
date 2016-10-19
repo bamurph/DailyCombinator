@@ -17,27 +17,25 @@ class HNService {
     let maxID = MutableProperty<Int>(0)
 
 
-    func signalForItem(_ id: Int) -> SignalProducer<NSDictionary, NSError> {
+
+    func signalForItem(_ id: Int) -> SignalProducer<HNItem, NSError> {
         return SignalProducer { sink, disposable in
             let itemRef = self.rootRef?.child(byAppendingPath: "item/\(id)")
 
             itemRef?.observe(.value, with: { snapshot in
                 guard let itemDict = snapshot?.value as? NSDictionary
                     else { return sink.send(error: HNError.NilResponse.toError()) }
-                sink.send(value: itemDict)
+                sink.send(value: HNItem(from: itemDict))
                 sink.sendCompleted()
             })
         }
     }
 
-    func signalForItems(ids: [Int]) -> SignalProducer<NSDictionary, NoError> {
+    func signalForItems(ids: [Int]) -> SignalProducer<HNItem, NoError> {
         let itemSignals = ids.map { signalForItem($0) }
-        let producers: SignalProducer<SignalProducer<NSDictionary, NSError>, NoError> = SignalProducer(values: itemSignals)
-        let merged: SignalProducer<NSDictionary, NSError> = producers.flatten(.merge)
-
+        let producers: SignalProducer<SignalProducer<HNItem, NSError>, NoError> = SignalProducer(values: itemSignals)
+        let merged: SignalProducer<HNItem, NSError> = producers.flatten(.merge)
         return merged.flatMapError { _ in .empty }
-
-
     }
 
     func maxIDUpdateTimer(interval: TimeInterval) -> Timer  {

@@ -17,14 +17,22 @@ class ItemTableViewController: UITableViewController {
     // TODO: - Inject itemID via storyboard segue
     private let itemID = MutableProperty<Int>(12734671)
     private let items = MutableProperty<[HNItem]>([])
-
+    var debugItems = [HNItem]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
         bindViewModel()
 
-        items.producer.startWithValues {
-            print($0.count)
+        items.producer.startWithSignal { (signal, _) in
+            signal.observeValues({ (value) in
+                print("THE ITEMS PROPERTY VALUE IS: \(value)")
+                self.debugItems = value
+                
+            })
+
+            signal.observeCompleted {
+                print("COMPLETED")
+            }
         }
     }
 

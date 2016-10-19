@@ -11,18 +11,20 @@ import Foundation
 struct HNItem {
     let id: Int
     let parent: Int?
-    var kids: [HNItem]
+    var kids: [Int]
     let text: String?
 
-    static func from(_ dict: NSDictionary) -> HNItem {
+    init(from dict: NSDictionary) {
+        self.id = dict.value(forKey: "id") as! Int
+        self.kids = dict.value(forKey: "kids") as? [Int] ?? []
+        self.parent = dict.value(forKey: "parent") as? Int
+        self.text = dict.value(forKey: "text") as? String
 
-        return HNItem.init(id: dict.value(forKey: "id") as! Int,
-                           parent: dict.value(forKey: "parent") as? Int,
-                           kids: [],
-                           text: dict.value(forKey: "text") as? String)
     }
 
+    mutating func matchKids(from: [HNItem]) {
 
+    }
 
 }
 

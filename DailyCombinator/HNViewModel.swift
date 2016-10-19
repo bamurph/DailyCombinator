@@ -35,9 +35,9 @@ class HNViewModel {
                 self.newsService.signalForItem(id)
                     .observe(on: QueueScheduler.main).start {
                         guard let r = $0.value else { return }
-                        self.commentText.value = r.value(forKey: "comment") as? String ?? ""
-                        self.titleText.value = r.value(forKey: "title") as? String ?? ""
-                        self.itemText.value = r.value(forKey: "text") as? String ?? ""
+//                        self.commentText.value = r.value(forKey: "comment") as? String ?? ""
+//                        self.titleText.value = r.value(forKey: "title") as? String ?? ""
+//                        self.itemText.value = r.value(forKey: "text") as? String ?? ""
                 }
 
         }
