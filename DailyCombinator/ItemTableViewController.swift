@@ -1,8 +1,8 @@
 //
-//  StoryTableViewController.swift
+//  ItemTableViewController.swift
 //  DailyCombinator
 //
-//  Created by Ben Murphy on 10/12/16.
+//  Created by Ben Murphy on 10/18/16.
 //  Copyright © 2016 Constellation Software. All rights reserved.
 //
 
@@ -11,63 +11,54 @@ import ReactiveCocoa
 import ReactiveSwift
 import Result
 
-class StoryTableViewController: UITableViewController {
+class ItemTableViewController: UITableViewController {
 
-    private let viewModel = StoryTableViewModel()
-    private let storyCellIdentifier = "StoryCell"
+    private let viewModel = ItemTableViewModel()
+    // TODO: - Inject itemID via storyboard segue
+    private let itemID = MutableProperty<Int>(12734671)
+    private let dicts = MutableProperty<[NSDictionary]>([])
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.refreshControl = UIRefreshControl()
-        self.refreshControl?.addTarget(self, action: #selector(refreshControlTriggered), for: .valueChanged)
-
-
-        
-        self.tableView.contentInset.top = 20
-
         bindViewModel()
-    }
 
-    // MARK: - Bindings
-    private func bindViewModel() {
-        viewModel.topStories.signal
-            .observe(on: UIScheduler())
-            .observeValues { [weak self] stories in
-                print("Table view reloading data")
-                self?.refreshControl?.endRefreshing()
-                self?.tableView.reloadData()
+        viewModel.dicts.producer.on(value: {print($0.count)}).start()
+        viewModel.dicts.producer.startWithValues { dicts in
+            print(dicts.count)
         }
-        viewModel.refreshObserver.send(value: ())
+
+        dicts.producer.startWithValues {
+            print($0.count)
+        }
     }
 
-    // MARK: - User Interaction
-    func refreshControlTriggered() {
-        viewModel.refreshObserver.send(value: ())
+    private func bindViewModel() {
+        dicts <~ viewModel.dicts.map { $0 }
+        viewModel.fetchItemTree(itemID.value)
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return viewModel.numberOfSections()
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return viewModel.numberOfStoriesInSection(section: section)
+        return dicts.value.count
     }
 
-
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: storyCellIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
-        //print(indexPath.item)
-        cell.textLabel?.text = viewModel.storyTitleAtIndexPath(indexPath: indexPath)
+
         return cell
     }
-
+    */
 
     /*
     // Override to support conditional editing of the table view.

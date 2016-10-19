@@ -23,5 +23,9 @@ struct HNStory: HNItemBase, HasText {
     internal var by: String?
     internal var text: String?
     internal var time: Date?
+}
 
+struct Node<T> {
+    let value: T
+    let kids: [T]
 }

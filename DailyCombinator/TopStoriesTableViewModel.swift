@@ -12,7 +12,7 @@ import ReactiveCocoa
 import Result
 import Firebase
 
-class StoryTableViewModel {
+class TopStoriesTableViewModel {
 
     let newsService = HNService()
     let topStories = MutableProperty<[NSDictionary]>([])
