@@ -31,6 +31,7 @@ class ItemTableViewController: UITableViewController {
     private func bindViewModel() {
         items <~ viewModel.itemList.map { $0 }
         viewModel.fetchItemTree(itemID.value)
+        
     }
 
     // MARK: - Table view data source

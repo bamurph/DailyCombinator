@@ -11,27 +11,20 @@ import Foundation
 struct HNItem {
     let id: Int
     let parent: Int?
-    var kids: [Int]
+    var kids: [HNItem]
     let text: String?
 
-    static func from(_ dict: NSDictionary) throws -> HNItem {
-        guard let id = dict.value(forKey: "id") as? Int else {
-            throw HNITemError.noID
-        }
+    static func from(_ dict: NSDictionary) -> HNItem {
 
-        return HNItem.init(id: id,
+        return HNItem.init(id: dict.value(forKey: "id") as! Int,
                            parent: dict.value(forKey: "parent") as? Int,
-                           kids: dict.value(forKey: "kids") as? [Int] ?? [],
+                           kids: [],
                            text: dict.value(forKey: "text") as? String)
     }
 
 
-    enum HNITemError: Error {
-        case noID
-    }
-}
-
-struct Node<T> {
 
 }
+
+
 

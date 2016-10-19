@@ -26,21 +26,29 @@ class ItemTableViewModel {
     func itemTreeSignal(_ id: Int) -> SignalProducer<HNItem, NoError> {
         return SignalProducer<HNItem, NoError> { sink,_ in
             self.newsService.signalForItem(id)
-                .map { try? HNItem.from($0) }
-                .skipNil()
-                .on(value: { item in
-                    sink.send(value: item)
-                    let kidsSignals = item.kids.map { self.itemTreeSignal($0) }
+                .on(value: { dict in
+                    // If there are no kids, send the item
+                    guard let kidsIDs = dict.value(forKey: "kids") as? [Int] else {
+                        sink.send(value: HNItem.from(dict))
+                        return
+                    }
+
+                    // If there are kids, build up the tree recursively
+                    var item = HNItem.from(dict)
+
+
+                    let kidsSignals = kidsIDs.map { self.itemTreeSignal($0) }
                     let kidsProducers: SignalProducer<SignalProducer<HNItem, NoError>, NoError> = SignalProducer(values: kidsSignals)
                     let merged: SignalProducer<HNItem, NoError> = kidsProducers.flatten(.merge)
-
-                    merged.startWithSignal { (observer, disposable) -> () in
-                        observer.observeValues( { item in
-                            sink.send(value: item)
-                        })
-                        observer.observeCompleted {
-                            sink.sendCompleted()
-                        }
+                    merged.startWithSignal { observer, disposable in
+                            observer.observeValues( { kid in
+                                item.kids.append(kid)
+                                print(item)
+                            })
+                            observer.observeCompleted {
+                                sink.send(value: item)
+                                print(item)
+                            }
                     }
                 })
                 .start()
