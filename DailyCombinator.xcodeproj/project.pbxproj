@@ -330,14 +330,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B52AC3331DA58253005ED981 /* ViewModel */ = {
+		B515D8961DB8057D008F4B73 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B52343821DAD819100AD5550 /* HNItems+Protocols.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B52AC3331DA58253005ED981 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				B5E5F4831DB68E27002363D0 /* ItemTableViewModel.swift */,
 				B52AC33C1DA5A389005ED981 /* HNViewModel.swift */,
 				B5688DC91DAED8C0001AEED2 /* TopStoriesTableViewModel.swift */,
 			);
-			name = ViewModel;
+			name = ViewModels;
 			sourceTree = "<group>";
 		};
 		B52AC3341DA58258005ED981 /* Service */ = {
@@ -392,7 +400,6 @@
 		B5688DDC1DAED8E6001AEED2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				B52343821DAD819100AD5550 /* HNItems+Protocols.swift */,
 				B52343241DA6C36100AD5550 /* FDataSnapshotExtensions.swift */,
 				B523433C1DA6CB3700AD5550 /* UIKitExtensions.swift */,
 			);
@@ -438,7 +445,8 @@
 		B5A586E81DA56DA600028F5C /* DailyCombinator */ = {
 			isa = PBXGroup;
 			children = (
-				B52AC3331DA58253005ED981 /* ViewModel */,
+				B515D8961DB8057D008F4B73 /* Models */,
+				B52AC3331DA58253005ED981 /* ViewModels */,
 				B5688DDB1DAED8D8001AEED2 /* Views */,
 				B5688DDC1DAED8E6001AEED2 /* Helpers */,
 				B52AC3341DA58258005ED981 /* Service */,

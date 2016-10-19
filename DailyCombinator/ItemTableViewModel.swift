@@ -15,7 +15,7 @@ import Firebase
 class ItemTableViewModel {
 
     let newsService = HNService()
-    let dicts = MutableProperty<[NSDictionary]>([])
+    let itemList = MutableProperty<[HNItem]>([])
 
 
 
@@ -23,38 +23,40 @@ class ItemTableViewModel {
 
     }
 
-    func itemTreeSignal(_ id: Int) -> SignalProducer<NSDictionary, NoError> {
-        return SignalProducer<NSDictionary, NoError> { sink,_ in
+    func itemTreeSignal(_ id: Int) -> SignalProducer<HNItem, NoError> {
+        return SignalProducer<HNItem, NoError> { sink,_ in
             self.newsService.signalForItem(id)
-                .on(value: { dict in
-                    let kidsIDs = dict.value(forKey: "kids") as? [Int] ?? []
-                    sink.send(value: dict)
-                    let kidsSignals = kidsIDs.map { self.itemTreeSignal($0) }
-                    let kidsProducers: SignalProducer<SignalProducer<NSDictionary, NoError>, NoError> = SignalProducer(values: kidsSignals)
-                    let merged: SignalProducer<NSDictionary, NoError> = kidsProducers.flatten(.merge)
+                .map { try? HNItem.from($0) }
+                .skipNil()
+                .on(value: { item in
+                    sink.send(value: item)
+                    let kidsSignals = item.kids.map { self.itemTreeSignal($0) }
+                    let kidsProducers: SignalProducer<SignalProducer<HNItem, NoError>, NoError> = SignalProducer(values: kidsSignals)
+                    let merged: SignalProducer<HNItem, NoError> = kidsProducers.flatten(.merge)
+
                     merged.startWithSignal { (observer, disposable) -> () in
-                        observer.observeValues( { dict in
-                            sink.send(value: dict)
+                        observer.observeValues( { item in
+                            sink.send(value: item)
                         })
                         observer.observeCompleted {
                             sink.sendCompleted()
                         }
                     }
-                }).start()
+                })
+                .start()
         }
     }
 
     func fetchItemTree(_ id: Int) {
         itemTreeSignal(id)
-            .on(starting: { self.dicts.value.removeAll() })
-            .on(value: { dict in
-                self.dicts.value.append(dict)
-
+            .on(starting: { self.itemList.value.removeAll() })
+            .on(value: { item in
+                self.itemList.value.append(item)
             })
             .start()
     }
 
-    
+
 
 
 }

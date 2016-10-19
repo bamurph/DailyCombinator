@@ -16,25 +16,20 @@ class ItemTableViewController: UITableViewController {
     private let viewModel = ItemTableViewModel()
     // TODO: - Inject itemID via storyboard segue
     private let itemID = MutableProperty<Int>(12734671)
-    private let dicts = MutableProperty<[NSDictionary]>([])
+    private let items = MutableProperty<[HNItem]>([])
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         bindViewModel()
 
-        viewModel.dicts.producer.on(value: {print($0.count)}).start()
-        viewModel.dicts.producer.startWithValues { dicts in
-            print(dicts.count)
-        }
-
-        dicts.producer.startWithValues {
+        items.producer.startWithValues {
             print($0.count)
         }
     }
 
     private func bindViewModel() {
-        dicts <~ viewModel.dicts.map { $0 }
+        items <~ viewModel.itemList.map { $0 }
         viewModel.fetchItemTree(itemID.value)
     }
 
@@ -47,7 +42,7 @@ class ItemTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return dicts.value.count
+        return items.value.count
     }
 
     /*
